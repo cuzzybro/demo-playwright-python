@@ -51,6 +51,10 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
+# local files
+.idea
+Pipfile.lock
+
 # Translations
 *.mo
 *.pot
