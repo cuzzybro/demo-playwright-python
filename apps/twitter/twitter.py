@@ -5,7 +5,7 @@ from apps.twitter.functions import twitter_login_page as login_page
 
 
 # this function optionally takes in either a Page or Browser object from the playwright sync api
-# it also return the page obect that is either passed or built in this function
+# it also return the page object that is either passed or built in this function
 def launch(page: Page = None, browser: Browser = None):
     if browser is not None:
         page = browser.newPage()
