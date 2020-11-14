@@ -17,15 +17,13 @@ signup_modal_dob: list[str] = [
 ]
 
 
-def signup_modal_gender(male_female_custom: str):
+def signup_modal_gender(male_female_custom: str = "male"):
     if male_female_custom.lower() == "female":
         return "//label[text()='Female']/following-sibling::input"
     elif male_female_custom.lower() == "male":
         return "//label[text()='Male']/following-sibling::input"
     elif male_female_custom.lower() == "custom":
         return "//label[text()='Custom']/following-sibling::input"
-    else:
-        return "//label[text()='Male']/following-sibling::input"
 
 
 signup_modal_signup_button: str = "//button[@name='websubmit']"

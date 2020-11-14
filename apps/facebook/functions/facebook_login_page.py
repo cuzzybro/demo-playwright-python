@@ -12,5 +12,5 @@ def register_new_account(page: Page):
     page.selectOption(_sel.signup_modal_dob[0], "20")
     page.selectOption(_sel.signup_modal_dob[1], "12")
     page.selectOption(_sel.signup_modal_dob[2], "1988")
-    page.click(_sel.signup_modal_gender("male"))
+    page.click(_sel.signup_modal_gender())
     page.click(_sel.signup_modal_signup_button)
