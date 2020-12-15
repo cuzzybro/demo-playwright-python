@@ -53,7 +53,7 @@ coverage.xml
 
 # local files
 .idea
-Pipfile.lock
+# Pipfile.lock
 
 # Translations
 *.mo
