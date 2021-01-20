@@ -22,6 +22,14 @@ def test_twitter_register_using_page(page):  # page argument is pytest fixture
     page.waitForTimeout(10000)
 
 
+def test_multi(browser):
+    for each in range(2):
+        page = browser.newPage()
+        twitter.launch(page)
+        twitter.login_page.register(page)
+        page.close()
+
+
 def test_stuff():
     pw = sync_playwright().start()
     browser = pw.chromium.launch(headless=False)

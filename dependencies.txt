@@ -1,3 +1,5 @@
 playwright
 pytest
 pipenv
+xlrd
+openpyxl

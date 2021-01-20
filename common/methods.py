@@ -161,7 +161,7 @@ last_names = ["Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller
               "Jenkins", "Perry", "Powell", "Long", "Patterson", "Hughes", "Flores", "Washington", "Butler", "Simmons",
               "Foster", "Gonzales", "Bryant ", "Alexander", "Russell", "Griffin ", "Diaz", "Hayes"]
 
-domains = ["hotmail.com", "gmail.com", "yahoo.com", "aol.com", "msn.com"]
+domains = ["hotmail.com", "gmail.com", "yahoo.com", "msn.com", "outlook.com"]
 
 
 def random_first_name() -> str:
