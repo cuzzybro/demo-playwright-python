@@ -11,4 +11,4 @@ implementation of playwright-python
         - pip3 install -r dependencies.txt
         
     - in pycharm ide preferences > tools > python integrated tools > testing: select pytest as default runner and save
-    
+

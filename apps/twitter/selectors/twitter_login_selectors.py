@@ -11,4 +11,5 @@ signup_modal_dob: list[str] = [
     "//select[@aria-label='Year']"
 ]
 signup_modal_use_email_instead_link: str = "//span[text()='Use email instead']"
-signup_modal_next_button: str = "//span[text()='Next']//ancestor::div[@role='button' and @data-focusable='true']"
+signup_modal_next_button: str = "//span[text()='Next']"
+hidden_next_btn: str = "//span[text()='Next']//ancestor::div[@role='button' and @aria-disabled='true']"

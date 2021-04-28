@@ -1,5 +1,7 @@
+from dataclasses import dataclass
 from datetime import datetime
 import random
+import typing
 
 
 def random_string(length: int = 5):
@@ -180,24 +182,24 @@ def random_domain() -> str:
     return random.choice(domains)
 
 
+@dataclass
 class ClientData:
-
-    def __init__(self):
-        self.first_name = random_first_name()
-        self.last_name = random_last_name()
-        self.email = f"{self.first_name}.{self.last_name}{random_number(3)}@{random_domain()}".lower()
+    first_name: str = random_first_name()
+    last_name: str = random_last_name()
+    email = f"{first_name}.{last_name}{random_number(3)}@{random_domain()}".lower()
 
 
 def test_stuff(page):
     items = []
     page.goto("https://rong-chang.com/namesdict/100_last_names.htm")
-    table_items = page.querySelectorAll("//table//tr/td/font//font/b/a")
+    table_items = page.query_selector_all("//table//tr/td/font//font/b/a")
     for item in table_items:
-        items.append(item.textContent())
-        print(f"\"{item.textContent()}\", ")
+        items.append(item.text_content())
+        print(f"\"{item.text_content()}\", ")
+
+    print(f"random selection: {random.choice(table_items).text_content()}")
 
 
 def test_more_stuff(page):
     print(f"{random_first_name()} {random_last_name()}")
-
 
